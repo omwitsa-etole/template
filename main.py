@@ -16,6 +16,8 @@ Python is strict on spacing i.e has no curly brackets for function definitions, 
 @app.route("/")
 def home():
 	#add your code or render a template using return render_template(template_name,**locals())
+	return render_template(templatename,**locals()) #renders the specified template with local variables
+
 	pass
 
 @app.route("/booking",methods=["GET","POST"])
@@ -24,7 +26,7 @@ def booking():
 		#if a post request is made to server
 		#have your code here
 		pass
-	pass
+	return render_template(templatename) #renders the specified template without local variables
 
 if __name__ == "__main__":
 	app.run("0.0.0.0")#run server on all addresses
